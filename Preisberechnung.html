@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="Preisberechnung.css" />
-        <title>Preisberechnung</title>
-    </head>
-    <body>
-        <form action="" onsubmit="start()">
-            <label for="screws">Wie viele Schrauben?</label>
-            <input type="number" name="screws" id="screws" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="Preisberechnung.css" />
+    <title>Preisberechnung</title>
+  </head>
+  <body>
+    <form action="" onsubmit="start()">
+      <label for="screws">Wie viele Schrauben?</label>
+      <input type="number" id="screws" />
 
-            <label for="screwNuts">Wie viele Muttern?</label>
-            <input type="number" name="screwNuts" id="screwNuts" />
+      <label for="screwNuts">Wie viele Muttern?</label>
+      <input type="number" id="screwNuts" />
 
-            <label for="grommets">Wie viele Unterlagscheiben?</label>
-            <input type="number" name="grommets" id="grommets" />
+      <label for="grommets">Wie viele Unterlagscheiben?</label>
+      <input type="number" id="grommets" />
 
-            <button type="submit">Absenden</button>
-            <button type="reset">Formular löschen</button>
-        </form>
-        <div>Summe: <span id="sum"></span></div>
+      <button type="submit">Absenden</button>
+      <button type="reset">Formular löschen</button>
+    </form>
+    <div id="sum"></div>
+    <!-- <div>Summe: <span id="sum"></span></div> -->
 
-        <script src="preisberechnung.js"></script>
-    </body>
+    <script src="preisberechnung.js"></script>
+  </body>
 </html>

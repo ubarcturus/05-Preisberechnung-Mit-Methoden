@@ -1,34 +1,42 @@
+/* eslint-disable max-classes-per-file */
+
+const PRICE_FOR_ONE_GROMMET = 0.05,
+  PRICE_FOR_ONE_SCREW = 0.2,
+  PRICE_FOR_ONE_SCREW_NUT = 0.1;
+
 class Einkauf {
-    oneScrewPrice = 0.2;
-    oneScrewNutPrice = 0.1;
-    oneGrommetPrice = 0.05;
+  screws;
 
-    screws = 0;
-    screwNuts = 0;
-    grommets = 0;
+  screwNuts;
 
-    werteAuslesen() {
-        this.screws = document.querySelector('#screws').value;
-        this.screwNuts = document.querySelector('#screwNuts').value;
-        this.grommets = document.querySelector('#grommets').value;
-    }
+  grommets;
 
-    berechnen(sum) {
-        sum =
-            this.screws * this.oneScrewPrice +
-            this.screwNuts * this.oneScrewNutPrice +
-            this.grommets * this.oneGrommetPrice;
-        return sum;
-    }
+  werteAuslesen() {
+    this.screws = document.querySelector("#screws").value;
+    this.screwNuts = document.querySelector("#screwNuts").value;
+    this.grommets = document.querySelector("#grommets").value;
+  }
 
-    ausgabe(sum) {
-        this.berechnen();
-        document.querySelector('#sum').textContent = sum;
-    }
+  berechnen() {
+    const sum =
+      this.screws * PRICE_FOR_ONE_SCREW +
+      this.screwNuts * PRICE_FOR_ONE_SCREW_NUT +
+      this.grommets * PRICE_FOR_ONE_GROMMET;
+    return sum;
+  }
+
+  ausgabe() {
+    document.querySelector("#sum").textContent = this.berechnen();
+  }
 }
-class start {
-    start() {
-        this.werteAuslesen();
-        this.ausgabe();
-    }
+class Start {
+  static start() {
+    const einkauf = new Einkauf();
+    einkauf.werteAuslesen();
+    einkauf.ausgabe();
+  }
 }
+
+// () => Start.start;
+
+Start.start();
