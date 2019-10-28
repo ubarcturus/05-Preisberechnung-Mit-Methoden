@@ -37,6 +37,4 @@ class Start {
   }
 }
 
-// () => Start.start;
-
 Start.start();
