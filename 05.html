@@ -81,9 +81,9 @@
         grommets = 0;
 
         werteAuslesen() {
-          this.screws = document.getElementById('screws').value;
-          this.screw_nuts = document.getElementById('screw_nuts').value;
-          this.grommets = document.getElementById('grommets').value;
+          this.screws = document.getElementById("screws").value;
+          this.screw_nuts = document.getElementById("screw_nuts").value;
+          this.grommets = document.getElementById("grommets").value;
         }
 
         berechnen() {
@@ -101,7 +101,7 @@
           var einkauf = new Einkauf();
           einkauf.werteAuslesen();
 
-          document.getElementById('result').innerText = einkauf.berechnen();
+          document.getElementById("result").innerText = einkauf.berechnen();
         }
       }
 

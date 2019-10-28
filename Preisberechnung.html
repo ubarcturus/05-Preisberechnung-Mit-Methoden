@@ -8,7 +8,7 @@
     <title>Preisberechnung</title>
   </head>
   <body>
-    <form action="" onsubmit="start()">
+    <form onsubmit="Start.start(); return false">
       <label for="screws">Wie viele Schrauben?</label>
       <input type="number" id="screws" />
 
@@ -21,8 +21,8 @@
       <button type="submit">Absenden</button>
       <button type="reset">Formular löschen</button>
     </form>
-    <div id="sum"></div>
-    <!-- <div>Summe: <span id="sum"></span></div> -->
+    <!-- <div id="sum"></div> -->
+    <div>Summe: <span id="sum"></span></div>
 
     <script src="preisberechnung.js"></script>
   </body>
